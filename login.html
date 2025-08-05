@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title> Apply Now | STEM CS Club</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="main-style.css">
+    <script src="../kit.fontawesome.com/6617a0ca29.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body style="color: #333;">
+    <a href="index.html">    
+        <div class="back">
+            <i class="fa-sharp fa-solid fa-house">back</i>
+        </div>
+    </a>
+    <!-- Same <head> section, keep as-is -->
+<body style="color: #333;">
+    <a href="index.html">    
+        <div class="back">
+            <i class="fa-sharp fa-solid fa-house"></i>
+        </div>
+    </a>
+
+    <div class="container" id="container">
+        
+        <div class="form-container sign-up-container">
+            <form>
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button class="button" type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="coming-soon-overlay" id="comingSoonOverlay">
+            Coming Soon
+        </div>
+
+        
+        <div class="form-container sign-in-container">
+            <form>
+                <div class="official-logo">
+                    <img src="imgs/official-logo.png" alt="">
+                </div>
+                <h1>Join the CS Learning Platform</h1>
+                <a class="button" id="signUp">Apply Now</a>
+            </form>
+        </div>
+    </div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    const realSignin = document.querySelector('.real-signin-section'); // if exists
+    const comingSoonOverlay = document.getElementById('comingSoonOverlay');
+
+    signUpButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        container.classList.add("right-panel-active");
+        if (realSignin) realSignin.classList.remove("active");
+
+        // Show "Coming Soon" after fade transition
+        setTimeout(() => {
+            comingSoonOverlay.classList.add("show");
+        }, 600); // Wait until fade animation finishes
+    });
+
+    signInButton?.addEventListener('click', (e) => {
+        e.preventDefault();
+        container.classList.remove("right-panel-active");
+        setTimeout(() => {
+            container.style.display = 'none';
+            if (realSignin) realSignin.classList.add("active");
+        }, 500);
+
+        // Hide "Coming Soon"
+        comingSoonOverlay.classList.remove("show");
+    });
+</script>
+
+</body>
+
+
+</html>
