@@ -33,17 +33,7 @@ Check it out here: [csweb-bay.vercel.app](https://csweb-bay.vercel.app)
 
 ---
 
-## Screenshots
-*(Insert a couple of relevant screenshots here to showcase your layout and design.)*
+## Note
+All the track links and other parts of the web will be made soon, The log in is coming soon as well.
 
----
 
-## Getting Started
-
-### Prerequisites
-Make sure you have a web browser installed. For local development, optionally have a simple HTTP server available, such as `live-server` or any equivalent.
-
-### Installation & Running
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Mysra-Ahmed/CSWEB.git
